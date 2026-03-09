@@ -1,34 +1,12 @@
-name: Sync content to app repo
+name: Trigger Vercel deploy
 
 on:
   push:
     branches: [main]
 
 jobs:
-  sync:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout app repo
-        uses: actions/checkout@v4
-        with:
-          repository: nz-to-utopia/app
-          token: ${{ secrets.APP_REPO_TOKEN }}
-          submodules: true
-
-      - name: Update content submodule
-        run: |
-          git submodule update --remote content
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit and push if changed
-        run: |
-          if git diff --quiet; then
-            echo "No content changes to sync"
-          else
-            git add content
-            git commit -m "Update content from policy repo
-
-          Triggered by push to nz-to-utopia/policy@${{ github.sha }}"
-            git push
-          fi
+      - name: Trigger Vercel deploy hook
+        run: curl -sS -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
