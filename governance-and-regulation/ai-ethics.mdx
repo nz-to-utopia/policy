@@ -4,25 +4,56 @@ title: AI Ethics
 
 # AI Ethics
 
-<Callout type="draft">
-This section needs contributors with expertise in technology ethics, policy, or law. Edit this page to help build it out.
+<Callout type="info">
+This is a living document — contribute your expertise by editing this page on GitHub.
 </Callout>
 
-## Context
+## The Algorithm Charter: Promise and Limits
 
-New Zealand needs a coherent ethical framework for AI that reflects our values — including te Tiriti o Waitangi obligations, environmental stewardship, and commitment to equity.
+New Zealand's most significant existing AI governance instrument is the **Algorithm Charter for Aotearoa New Zealand**, launched by Statistics New Zealand in July 2020. Signed by approximately 30 public sector agencies — including Stats NZ, the Ministry of Social Development, Inland Revenue, the Ministry of Justice, New Zealand Police, Accident Compensation Corporation, and Te Whatu Ora — the Charter commits signatories to five principles: transparency in how algorithms are used, bias testing before and after deployment, human oversight of consequential decisions, meaningful explanation to affected people, and engagement with those affected by algorithmic systems.
 
-## Key areas to explore
+The Charter represents genuine progress. It normalises the idea that government algorithms are a matter of public interest, not just technical implementation. But it has three structural weaknesses. First, it is voluntary — agencies sign up but face no sanction for non-compliance. Second, monitoring is weak; there is no independent body reviewing whether Charter commitments translate into practice. Third, coverage is partial — the Charter applies only to central government signatories, leaving local government, the health system (pre-Pae Ora restructure), and the private sector unregulated.
 
-- **Ethical principles** — A NZ-specific AI ethics framework
-- **Algorithmic accountability** — Transparency and explainability requirements
-- **Bias and fairness** — Preventing AI systems from perpetuating discrimination
-- **Employment rights** — Worker protections in AI-managed workplaces
-- **Autonomous systems** — Liability and safety for AI decision-making
-- **Environmental impact** — Energy and resource costs of AI systems
+## Toward an NZ AI Ethics Act
 
-## Questions for contributors
+A statutory framework is needed to give the Charter's principles legal force and extend them across the economy. We propose a **New Zealand AI Ethics Act** structured around three tiers of regulatory intensity, calibrated by the risk profile of the AI system:
 
-1. What ethical principles should guide AI use in NZ?
-2. How do we make algorithmic accountability practical for businesses?
-3. What existing NZ legislation needs updating for AI?
+**Tier 1 — Prohibited uses:** AI systems that pose unacceptable risks regardless of design. This includes real-time biometric surveillance in public spaces without judicial authorisation, social scoring systems that affect access to public services based on behaviour across contexts, and AI that manipulates people through subliminal techniques.
+
+**Tier 2 — High-risk systems (mandatory compliance):** AI used in consequential public-sector decisions — benefit eligibility, sentencing recommendations, child welfare assessments, immigration processing — and high-risk private sector applications including credit scoring, employment screening, and medical diagnosis support. Tier 2 systems require mandatory algorithmic impact assessment prior to deployment, ongoing bias monitoring, human review rights, and registration with a central regulator.
+
+**Tier 3 — Standard risk (disclosure and audit rights):** All other commercial AI systems affecting NZ consumers or workers. Tier 3 requires disclosure that AI is being used, access to a human review upon request, and retention of audit logs sufficient to investigate complaints.
+
+## Algorithmic Impact Assessments
+
+Canada's **Directive on Automated Decision-Making** (2019) provides the most developed government model: a mandatory impact assessment tool that rates automated systems on a four-level scale, with controls (human review, notice, explanation, peer review) calibrated to risk level. The NZ equivalent should be published openly, updated as technology evolves, and administered by an AI Regulator sitting within or alongside the Privacy Commissioner's office.
+
+## Bias and Fairness: NZ-Specific Concerns
+
+Abstract commitments to fairness mean little without confronting specific harms. Two cases illustrate the stakes in NZ's context:
+
+**MSD's predictive models.** The Ministry of Social Development has used risk-scoring models to allocate case management resources, including tools that predict future benefit dependence. Welfare advocacy groups have raised concerns that such models encode structural disadvantage — if historical data reflects past discrimination (in housing, employment, or education), a model trained on that data will replicate it. Māori and Pasifika communities, already overrepresented in poverty statistics as a legacy of colonisation, face the highest risk of compounding harm through automated welfare decisions.
+
+**Police facial recognition.** New Zealand Police have explored facial recognition technology for investigative purposes. Research consistently shows that commercial facial recognition systems have substantially higher error rates for darker-skinned faces — a bias documented by NIST in multiple vendor audits. Deploying such systems in NZ would disproportionately affect Māori and Pasifika people, who are already overrepresented in police contact. A moratorium on operational use of facial recognition in public spaces, pending independent evaluation and legislative authorisation, is appropriate.
+
+<Callout type="warning">
+Algorithmic systems that replicate or amplify existing inequities are not neutral tools — they are policy choices. Deploying them without bias assessment is not a technical decision; it is a political one.
+</Callout>
+
+## Worker Protections in AI-Managed Workplaces
+
+Algorithmic management — where software systems direct, monitor, and evaluate workers in real time — is already present in NZ logistics, retail, and customer service. Gig economy platforms set prices, assign work, and deactivate workers through automated systems with minimal human involvement. As AI capability grows, this model will expand.
+
+Workers subject to algorithmic management have specific rights that NZ employment law does not yet adequately protect. The Employment Relations Act 2000 should be updated to require: disclosure when AI systems make or materially influence employment decisions; the right to a human review of any AI-generated performance assessment or disciplinary action; limits on continuous biometric or productivity monitoring; and a duty to consult unions and worker representatives before deploying significant AI systems affecting working conditions.
+
+## Te Tiriti Obligations in AI Systems
+
+The Waitangi Tribunal's *He Pua Pua* framework and subsequent jurisprudence establish that the Crown has active obligations — not merely passive non-discrimination duties — in its relationships with Māori. Applied to AI governance, this means several things: government AI systems should not be deployed in ways that adversely affect Māori without meaningful consultation with iwi and hapū; algorithmic models trained on NZ government data should be tested for differential impact on Māori; and the Algorithm Charter's engagement principle should be strengthened to require genuine partnership with Māori communities, not tokenistic consultation.
+
+More fundamentally, Māori perspectives on data, identity, and collective decision-making challenge assumptions built into most Western AI governance frameworks — that data is a property right held by individuals, that decisions are best made by optimising for measurable outcomes, that accountability runs through formal legal channels. NZ's AI governance framework will be more robust for engaging these challenges seriously, not treating them as edge cases.
+
+## Environmental Impact of AI Compute
+
+Training large AI models is energy-intensive: GPT-4's training run has been estimated to have consumed more electricity than a small country uses in a day, and inference at scale compounds this. NZ's electricity grid is approximately 85% renewable — one of the highest shares in the world — which gives us a structural advantage as a location for responsible AI compute. Government policy should leverage this by: requiring disclosure of energy consumption for AI systems procured by the public sector; establishing a green AI standard that prefers systems run on renewable electricity; and investing in the renewable grid capacity needed to host sovereign inference infrastructure without displacing other demand.
+
+NZ should resist becoming a data centre hub on terms that benefit offshore investors at the expense of grid stability or carbon budgets. The value of our renewable energy for AI compute should accrue primarily to NZ — through lower energy costs for domestic AI services, not subsidised exports of electricity-intensive processing capacity to foreign hyperscalers.

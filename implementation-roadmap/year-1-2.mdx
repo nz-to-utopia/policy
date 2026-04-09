@@ -4,39 +4,89 @@ title: "Year 1–2 (2026–2027)"
 
 # Year 1–2: Immediate Priorities (2026–2027)
 
-<Callout type="draft">
-This section needs contributors. Edit this page to help build it out.
-</Callout>
-
 ## Context
 
-The first two years should focus on assessment, planning, and quick wins — actions that build the foundation for larger changes while delivering immediate benefit.
+The first two years are the most consequential. Without a rigorous national baseline — a shared, evidence-based picture of where AI is displacing work, which communities are most exposed, and what NZ's current institutional capacity actually is — later phases will be built on guesswork. The actions in this phase are designed to generate that evidence, while simultaneously launching targeted pilots whose results will determine what gets scaled in Years 3–5.
 
-## Key areas to explore
+None of the interventions below require waiting for consensus on contested long-term questions. They are investments in the information and institutional capacity needed to make better decisions — and they are defensible to any government regardless of its broader ideological orientation.
 
-- **National AI assessment** — Commission a comprehensive assessment of AI's impact on NZ industries and workforce
-- **Education pilot programmes** — Launch AI literacy pilots in schools and vocational training
-- **Regulatory review** — Identify legislation that needs updating for AI
-- **Data sovereignty framework** — Establish principles and governance for NZ data sovereignty
-- **Sovereign inference pilot** — Begin scoping and procurement for [government-owned AI inference infrastructure](/transition-strategies/innovation-policy) on open-source models
-- **Transition support pilots** — Trial reskilling programmes in the most affected sectors
-- **Public engagement** — National conversation about NZ's AI future
+## National AI Impact Assessment
 
-## Party canvassing — making AI a political issue
+**Estimated cost:** $5–10M over 12 months  
+**Lead agency:** MBIE and Treasury joint team, with Productivity Commission involvement  
+**Deliverable:** Sector-by-sector workforce modelling published as open data
 
-A key Year 1 action: develop a standardised set of AI policy questions covering each major section of this document, and put them to all NZ political parties. Publish responses side-by-side on this site so voters can compare positions.
+New Zealand needs a national baseline before it can design effective policy. The assessment should model AI exposure by sector, occupation, and region — identifying which roles are most vulnerable to near-term automation, which industries are likely to grow, and where the geographic concentrations of risk are highest. It should draw on existing frameworks (OECD, Oxford Martin School, McKinsey Global Institute) while generating NZ-specific data that reflects our industrial composition, which differs meaningfully from the US and UK economies on which most global estimates are based.
+
+The assessment should be published in full as open data, enabling independent scrutiny and giving researchers, unions, industry groups, and local councils the information they need to plan. The methodology — and its limitations — should be documented explicitly. This is hypothesis generation, not prediction.
+
+## AI Literacy Pilots
+
+**Estimated cost:** $15–20M over two years  
+**Lead agency:** Ministry of Education, in partnership with TEC  
+**Scale:** 50 schools across decile range + 10 polytechnics
+
+AI literacy is becoming a core competency, not an elective. The pilots should integrate AI tools directly into curriculum delivery — not as a subject in itself, but as a working environment students learn to use critically and effectively across existing subjects. Equally important is critical AI literacy: understanding how models work, where they fail, how to detect synthetic content, and how to evaluate AI-generated claims.
+
+Pilot schools should be selected to span decile range, urban/rural distribution, and curriculum type. Outcome measurement should include both technical proficiency and confidence metrics, with particular attention to equity: if AI literacy gains are concentrated in high-decile schools, the pilots will have replicated existing inequality rather than reduced it. An independent evaluation should report within 18 months of pilot launch to inform the Year 3 curriculum reform decision.
+
+## Regulatory Audit
+
+**Lead agency:** Ministry of Justice, in consultation with MBIE and the Privacy Commissioner  
+**Deliverable:** Gap analysis report with recommended legislative amendments
+
+Four pieces of existing legislation have significant AI-related gaps that are already creating problems for affected individuals and businesses:
+
+- **Privacy Act 2020** — largely silent on automated decision-making, profiling, and synthetic data. The Act's framework predates large-scale AI deployment.
+- **Employment Relations Act 2000** — does not address algorithmic management, AI-assisted hiring and dismissal, or the rights of workers whose performance is scored or ranked by automated systems.
+- **Health and Safety at Work Act 2015** — unclear on employer obligations when AI systems contribute to unsafe decisions or when workers are monitored by automated systems.
+- **Consumer Guarantees Act 1993** — does not address AI-generated advice, automated services, or liability when AI systems cause consumer harm.
+
+The audit should identify specific provisions requiring amendment, draft indicative legislative language, and propose a sequencing for reform — recognising that comprehensive reform takes time and that some protections can be implemented faster than others through regulation rather than legislation.
+
+## Sovereign Inference Pilot
+
+**Estimated cost:** $20–50M over two years  
+**Lead agency:** Department of Internal Affairs, with NIWA and NeSI as compute partners  
+**Scope:** Deploy open-weight models for three government agencies; measure cost, performance, and data sovereignty outcomes
+
+New Zealand currently relies almost entirely on commercial AI APIs from US-headquartered providers. This creates dependency risk (pricing changes, terms-of-service changes, outage risk) and data sovereignty concerns, particularly for sensitive government workloads. The pilot tests whether NZ can operate its own inference infrastructure at government scale, at reasonable cost, using open-weight models (such as the Llama or Mistral families) deployed on existing HPC infrastructure at NIWA and NeSI.
+
+Three agencies should be selected for the pilot based on willingness and suitability of use case — administrative summarisation, document processing, and internal Q&A are strong candidates that avoid high-stakes automated decision-making while generating meaningful cost and performance data. The pilot should track: cost per query versus commercial API equivalent, latency, model performance on NZ-specific content, and any data residency or security benefits.
+
+Results should feed directly into the Year 3 decision about whether to commission dedicated sovereign compute infrastructure.
+
+## Transition Support Fund
+
+**Estimated cost:** $50–100M over two years  
+**Lead agency:** MSD and MBIE jointly  
+**Model:** COVID-19 wage subsidy mechanism adapted for structural displacement
+
+The COVID-19 wage subsidy demonstrated that NZ can deploy income support rapidly, at scale, with a clear eligibility framework. The Transition Support Fund applies a similar mechanism to AI-driven displacement — but with structural rather than cyclical intent. Unlike the wage subsidy, it is not designed to maintain employment relationships that no longer make economic sense; it is designed to support workers through the gap between displacement and re-entry into the labour market.
+
+The fund should be targeted at sectors identified as high-exposure in the National AI Impact Assessment, with eligibility criteria that don't require workers to prove AI causation (which is often ambiguous) but instead reflect the labour market conditions in affected sectors. Support should be time-limited but sufficient: modelling suggests a two-year support window, combined with active retraining access, is more effective than either income support alone or retraining mandates without income security.
+
+The fund's design should be informed by international experience — Finland's basic income experiment, Canada's sectoral workforce development boards, and Denmark's flexicurity model all offer relevant evidence — while reflecting NZ's specific institutional context.
+
+## Public Engagement: Citizens' Assembly
+
+**Lead agency:** Department of the Prime Minister and Cabinet  
+**Scale:** 100+ representative New Zealanders, deliberating over six months
+
+AI policy decisions involve genuine value trade-offs that expert analysis cannot resolve alone: How much weight should NZ give to economic efficiency versus employment stability? Who bears the cost of transition — those displaced, or taxpayers broadly? What risks are acceptable in AI-assisted government services? These are democratic questions, not technical ones.
+
+A Citizens' Assembly — drawing on the model used in Ireland for constitutional reform and in the UK for climate policy — convenes a representative cross-section of New Zealanders to deliberate on these questions with access to expert evidence and time to reach considered recommendations. The assembly's output is not binding, but it establishes a democratic mandate that is qualitatively different from polling or select committee submissions.
+
+The assembly should be commissioned in Year 1 and report within six months, with recommendations feeding into the Year 3–5 legislative programme.
+
+## Party Canvassing: Making AI a Political Issue
+
+A parallel Year 1 action: develop a standardised set of AI policy questions covering each major section of this document, and put them to all NZ political parties. Publish responses side-by-side on this site so voters can compare positions.
 
 **Why this matters:**
 - Forces parties to articulate concrete positions on AI transition, not vague platitudes
-- Creates a public record — stated positions can be tracked against actual policy
+- Creates a public record — stated positions can be tracked against actual policy outcomes
 - Frames resource allocation as the core question: which parties are willing to invest in transition?
-- Relevant to the 2026 NZ election cycle and every cycle after
+- Relevant to the 2026 NZ election cycle and every subsequent cycle
 
-**The question set** should cover: workforce transition funding, education reform, sovereign infrastructure investment, data sovereignty, social safety net adequacy, and governance frameworks. Responses published as an interactive comparison matrix on the site.
-
-## Questions for contributors
-
-1. What are the highest-priority actions for the first two years?
-2. What quick wins could build public confidence in AI governance?
-3. What assessment tools and frameworks should NZ adopt?
-4. What questions should we put to political parties about AI transition?
+**The question set** should cover: workforce transition funding, education reform, sovereign infrastructure investment, data sovereignty, social safety net adequacy, and governance frameworks. Responses published as an interactive comparison matrix on this site, updated as parties revise their positions.

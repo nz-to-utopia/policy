@@ -4,33 +4,59 @@ title: Data Sovereignty
 
 # Data Sovereignty
 
-<Callout type="draft">
-This section needs contributors, particularly those with expertise in Te Mana Raraunga (Maori data sovereignty). Edit this page to help build it out.
+<Callout type="info">
+This is a living document — contribute your expertise by editing this page on GitHub.
 </Callout>
 
 ## Context
 
-AI runs on data. Who controls that data — and how it's used — is a fundamental governance question. For New Zealand, this includes both general data rights and the specific obligations of Te Tiriti o Waitangi regarding Maori data.
+AI runs on data. Who controls that data — and how it is used — is a fundamental governance question. For New Zealand, this has two distinct but connected dimensions: the general rights of all New Zealanders over their personal information, and the specific obligations of Te Tiriti o Waitangi regarding Māori data. Both demand a more assertive posture than current law provides.
 
-## Sovereign inference — not just data, but compute
+## Te Mana Raraunga: Māori Data Sovereignty
 
-Data sovereignty is only half the picture. If NZ's data stays onshore but is processed by foreign-controlled AI systems, sovereignty is illusory. We propose that New Zealand operate [government-owned inference infrastructure](/transition-strategies/innovation-policy) running open-source models — ensuring that sensitive workloads (health, education, justice, public services) are processed on systems NZ controls.
+The **Te Mana Raraunga** network, founded in 2015, has developed the most sophisticated indigenous data sovereignty framework in the world. Its principles — now influential in Australia, Canada, and the United States through the related OCAP® and FNIGC frameworks — rest on three foundational concepts applied to data:
 
-This avoids dependence on either US or Chinese AI providers, whose terms, pricing, and political alignment can change without notice. Open-weight models (Llama, Mistral, and successors) make this feasible today at a fraction of the cost of building foundation models from scratch.
+**Whakapapa** (genealogy and relationship) holds that data is not free-floating information but is always connected to its origins — the people, places, and relationships it describes. A health dataset drawn from Māori communities carries whakapapa to those communities; it cannot be treated as an abstract asset severed from that lineage. This has direct implications for AI training: models trained on data with Māori whakapapa are not neutral — they embed relationships and carry obligations.
 
-## Key areas to explore
+**Mana** (authority and integrity) asserts that Māori communities hold inherent authority over data about them. This is not simply a right to opt out of data collection — it is a positive claim to participate in governance of that data. Applied to AI, mana means that iwi and hapū should have a genuine role in determining how government data about Māori communities is used to train or validate models, not merely receive notification after the fact.
 
-- **Te Mana Raraunga** — Maori data sovereignty principles and their application to AI
-- **Sovereign inference** — Government-operated AI compute on open-source models
-- **National data strategy** — What data should NZ hold sovereign control over?
-- **Privacy** — How NZ's Privacy Act applies to AI data collection and use
-- **Cross-border data flows** — NZ data in overseas AI systems
-- **Government data** — Open data for innovation vs privacy and sovereignty concerns
-- **Individual data rights** — Personal control over data used to train AI systems
+**Kaitiakitanga** (guardianship and stewardship) frames data governance as an ongoing responsibility rather than a one-time consent transaction. Kaitiaki are not owners in the Western property-rights sense; they are stewards who must ensure data serves the well-being of the community it describes and of future generations. For AI systems, this implies continuous monitoring for harm — not just pre-deployment impact assessment.
 
-## Questions for contributors
+Te Mana Raraunga's principles should be incorporated into the statutory framework governing government AI procurement and data sharing. Specifically: any government dataset with significant Māori content that is used to train, fine-tune, or validate an AI model should be subject to a whakapapa assessment and iwi engagement before that use proceeds.
 
-1. How should Te Mana Raraunga principles be integrated into AI governance?
-2. What data should New Zealand not allow to leave the country?
-3. How do we balance open data for innovation with sovereignty concerns?
-4. What is the minimum viable sovereign inference infrastructure for NZ government use?
+## NZ Privacy Act 2020
+
+The Privacy Act 2020 represents a meaningful upgrade on the 1993 Act, but it was not designed with AI-era data practices in mind. Its key provisions include: twelve Information Privacy Principles governing collection, storage, use, and disclosure; a mandatory breach notification regime (notify the Privacy Commissioner within 72 hours of a notifiable privacy breach); and broader rules on cross-border data transfers — personal information may only be sent overseas if the recipient country has comparable privacy protections, the individual consents, or the transfer falls within a narrow set of exceptions.
+
+The Act does not, however, address **automated decision-making** as a distinct category. There is no right equivalent to GDPR Article 22 — the right not to be subject to solely automated decisions that produce legal or similarly significant effects. Closing this gap is a priority.
+
+## Cross-Border Data Flows: Current Exposure
+
+New Zealand government and commercial data is substantially processed outside NZ's borders. AWS's primary NZ region is **AWS Sydney** (ap-southeast-2); most NZ government cloud workloads default here. Microsoft Azure operates out of Australia East (New South Wales). Google Cloud's nearest region is Sydney. None of these is subject to New Zealand law.
+
+US cloud providers are subject to the **CLOUD Act** (2018), which allows US law enforcement to compel disclosure of data stored anywhere in the world by US-incorporated providers, regardless of where the data physically sits. This is not hypothetical: the Act has been used. NZ government data stored in AWS Sydney or Azure Australia is legally accessible to US authorities under CLOUD Act processes, without NZ being notified.
+
+This is not an argument against using cloud infrastructure — on-premise alternatives are often less secure, not more. It is an argument for: (a) data classification that identifies which categories of government data are sensitive enough to require onshore processing; (b) sovereign compute infrastructure for those categories; and (c) honest public acknowledgement that "our data is in Australia" does not mean "our data is sovereign."
+
+## Key Datasets Warranting Onshore Sovereign Control
+
+Not all data requires the same level of protection. A proportionate sovereignty framework would prioritise:
+
+- **Health data (NHI system):** The National Health Index links health records across the NZ health system. Te Whatu Ora / Health New Zealand holds records for virtually every New Zealander. This data should be processed only on infrastructure subject to NZ jurisdiction.
+- **Social welfare data:** MSD, Work and Income, and Oranga Tamariki hold sensitive records on the most vulnerable New Zealanders. Algorithmic processing of this data to inform benefit decisions or child welfare assessments demands sovereign oversight.
+- **Electoral and census data:** Stats NZ conducts the five-yearly census and holds longitudinal data on the NZ population. The integrity of this data — and who can access it — is foundational to democratic governance.
+- **Justice and corrections data:** Prisoner records, police intelligence, sentencing data, and court records should not be processed on infrastructure subject to foreign legal access.
+
+## Sovereign Inference — Not Just Data, But Compute
+
+Data sovereignty is only half the picture. If NZ's data stays onshore but is processed by foreign-controlled AI systems, sovereignty is illusory. We propose that New Zealand operate [government-owned inference infrastructure](/transition-strategies/innovation-policy) running open-weight models — ensuring that sensitive workloads (health, education, justice, public services) are processed on systems NZ controls.
+
+This avoids dependence on either US or Chinese AI providers, whose terms, pricing, and political alignment can change without notice. Open-weight models (Meta's Llama series, Mistral, DeepSeek, and their successors) make this technically feasible today. The economics are more accessible than commonly assumed:
+
+A small sovereign inference cluster sufficient for government workloads — perhaps 8–16 H100-class GPUs with high-memory configuration — could be provisioned for approximately NZD $3–5 million in capital cost, with operating costs of NZD $800,000–1.5 million per year (power, cooling, maintenance, staffing). This is comparable to what NZ government agencies collectively spend on offshore AI API access annually. The difference is that sovereign infrastructure serves public interests under NZ law, with no risk of vendor price changes, terms-of-service modifications, or geopolitical disruption.
+
+Open-weight models at the 70B–405B parameter range (Llama 3.1 405B, DeepSeek-V3) match or exceed proprietary models on many government tasks: document classification, policy drafting assistance, translation (including te reo Māori with appropriate fine-tuning), and structured data analysis. They can be fine-tuned on NZ-specific datasets — including te reo Māori corpora — in ways that proprietary API-based models cannot.
+
+<Callout type="info">
+Sovereign inference is not about building a NZ foundation model from scratch — that would cost billions and produce an inferior result. It is about running world-class open-weight models on infrastructure that NZ controls, so that the governance, accountability, and value of AI compute accrues domestically.
+</Callout>
