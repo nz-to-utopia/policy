@@ -37,9 +37,9 @@ export const manifest: DocSection[] = [
     description: "Which sectors and roles are most affected, and when",
     status: "published",
     children: [
-      { title: "Job Displacement", slug: "job-displacement", file: "ai-as-disruptor/job-displacement.mdx", status: "draft" },
-      { title: "New Opportunities", slug: "new-opportunities", file: "ai-as-disruptor/new-opportunities.mdx", status: "draft" },
-      { title: "Timeline", slug: "timeline", file: "ai-as-disruptor/timeline.mdx", status: "draft" },
+      { title: "Job Displacement", slug: "job-displacement", file: "ai-as-disruptor/job-displacement.mdx", status: "published" },
+      { title: "New Opportunities", slug: "new-opportunities", file: "ai-as-disruptor/new-opportunities.mdx", status: "published" },
+      { title: "Timeline", slug: "timeline", file: "ai-as-disruptor/timeline.mdx", status: "published" },
     ],
   },
   {
