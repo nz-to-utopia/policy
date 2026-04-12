@@ -127,10 +127,10 @@ export const manifest: DocSection[] = [
     slug: "appendices",
     file: "appendices/index.mdx",
     description: "Glossary, methodology, and references",
-    status: "draft",
+    status: "published",
     children: [
-      { title: "Glossary", slug: "glossary", file: "appendices/glossary.mdx", status: "draft" },
-      { title: "Methodology", slug: "methodology", file: "appendices/methodology.mdx", status: "draft" },
+      { title: "Glossary", slug: "glossary", file: "appendices/glossary.mdx", status: "published" },
+      { title: "Methodology", slug: "methodology", file: "appendices/methodology.mdx", status: "published" },
     ],
   },
 ];
