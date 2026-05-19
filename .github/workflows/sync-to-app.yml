@@ -3,6 +3,8 @@ name: Trigger Vercel deploy
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'contributed-works/**'
 
 jobs:
   deploy:
